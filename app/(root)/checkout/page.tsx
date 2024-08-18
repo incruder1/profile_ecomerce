@@ -35,7 +35,7 @@ const discountData = [
   },
 ];
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const router = useRouter(); 
   const { cart, updateQuantity, removeItem, clearCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
@@ -317,4 +317,4 @@ clearCart();
   );
 };
 
-export default page;
+export default Page;
