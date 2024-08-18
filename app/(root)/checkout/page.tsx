@@ -122,10 +122,7 @@ const Page = (props: Props) => {
           setIsDiscountCodeValid(true);
           break;
         case DISCOUNT_TYPES.FLAT:
-          toast.success(
-            `Coupon successfully applied for up to $${discObj.discount} 🎉!`
-          );
-          setIsDiscountCodeValid(true);
+        setIsDiscountCodeValid(true);
           break;
         default:
           toast.error("Invalid discount coupon!");
@@ -255,7 +252,7 @@ clearCart();
                     </h1>
                   </div>
                   <div className="flex items-center justify-between mb-8 text-my-text-950 gap-4 relative">
-                    <p className="font-normal whitespace-nowrap text-base">
+                    <p className="whitespace-nowrap text-base font-medium	">
                       Discount Code
                     </p>
                     <div className="relative">
@@ -267,7 +264,7 @@ clearCart();
                         className="bg-my-background-900 text-my-text-100 px-2 md:px-4 py-1 rounded-full font-normal text-sm md:text-base uppercase placeholder:text-xs relative"
                         maxLength={20}
                       />
-                      <span className="text-sm text-my-text-800 absolute right-1/2 translate-x-1/2 top-8 md:top-10 whitespace-nowrap">
+                      <span className="text-sm text-my-text-800 absolute right-1/2 translate-x-1/4 top-8 md:top-10 whitespace-nowrap font-medium text-sm">
                         (Press Enter to apply)
                       </span>
                     </div>
@@ -281,13 +278,13 @@ clearCart();
                       </span>
                     )}
                   </div>
-                  <p className="text-base mb-4 text-my-text-950 flex items-center justify-between">
+                  <p className="text-base mb-4 text-my-text-950 flex items-center justify-between font-medium	">
                     Subtotal <p>${cartSummary.subTotal}</p>
                   </p>
-                  <p className="text-base mb-4 text-my-text-950 flex items-center justify-between">
+                  <p className="text-base font-medium	 mb-4 text-my-text-950 flex items-center justify-between">
                     Discount <p>${cartSummary.discount}</p>
                   </p>
-                  <p className="mb-4 text-my-text-950 flex items-center justify-between text-xl">
+                  <p className="mb-4 flex items-center justify-between text-base font-medium	">
                     Total <p>${cartSummary.total}</p>
                   </p>
                   <div className="flex flex-row gap-2 justify-around	 ">
