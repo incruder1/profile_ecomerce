@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['fakestoreapi.com','cdn.dummyjson.com'],  
+      },
+};
 
 export default nextConfig;
+// next.config.js
+
+
+  
